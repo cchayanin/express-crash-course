@@ -3,6 +3,10 @@ const restaurantsRouter = require("./routes/restaurants");
 
 const app = express();
 
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // Routes
 app.use("/apis/restaurants", restaurantsRouter);
 
